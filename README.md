@@ -24,3 +24,7 @@ npm install svelte-code-input
 <label for="code">My Code Input</label>
 <CodeEditor name="code" store={codeStore}/>
 ```
+
+## Contributing
+
+*Contributing docs in the works*
