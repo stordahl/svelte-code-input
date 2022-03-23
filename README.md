@@ -2,4 +2,25 @@
 
 # svelte-code-input
 
-WIP
+svelte-code-input is a simple text input that is meant to emulate a code editor in the browser.
+
+## Installation
+
+```shell
+npm install svelte-code-input
+```
+
+## Usage
+
+```svelte
+<script>
+  import CodeEditor from "svelte-code-input/CodeEditor.svelte"
+  
+  import { writable } from "svelte/store"
+  
+  const codeStore = writable("");
+</script>
+
+<label for="code">My Code Input</label>
+<CodeEditor name="code" store={codeStore}/>
+```
