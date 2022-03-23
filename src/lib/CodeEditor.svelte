@@ -1,16 +1,16 @@
 <script lang=ts>
   import {CodeEditorStore} from '$lib/CodeEditorStore'
 
-  export let name
+  export let name:string
   export let store = CodeEditorStore
   export let blurCallback = undefined
   
   // style props 
-  export let innerPadding = 0
-  export let lineCountBg = 'gray'
-  export let lineCountColor = 'black'
-  export let editorBg = 'lightgray'
-  export let editorColor = 'black'
+  export let innerPadding:string = '0'
+  export let lineCountBg:string = 'gray'
+  export let lineCountColor:string = 'black'
+  export let editorBg:string = 'lightgray'
+  export let editorColor:string = 'black'
 
   let codeEditor
 
