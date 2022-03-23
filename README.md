@@ -2,7 +2,7 @@
 
 # svelte-code-input
 
-svelte-code-input is a simple text input that is meant to emulate a code editor in the browser.
+A simple text input that emulates a code editor in the browser.
 
 ## Installation
 
