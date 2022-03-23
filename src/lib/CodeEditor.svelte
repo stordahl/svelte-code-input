@@ -1,7 +1,16 @@
 <script lang=ts>
+  import {CodeEditorStore} from '$lib/CodeEditorStore'
+
   export let name
-  export let store
+  export let store = CodeEditorStore
   export let blurCallback = undefined
+  
+  // style props 
+  export let innerPadding = 0
+  export let lineCountBg = 'gray'
+  export let lineCountColor = 'black'
+  export let editorBg = 'lightgray'
+  export let editorColor = 'black'
 
   let codeEditor
 
@@ -21,12 +30,16 @@
   }
 </script>
 
-<div>
+<div
+  style:padding={innerPadding}
+>
   <div id="editorBase">
     <textarea 
       bind:value={lineCounterValue} 
       name="lineCounter" 
-      id="lineCounter" 
+      id="lineCounter"
+      style:background-color={lineCountBg}
+      style:color={lineCountColor}
       cols="2"  
       readonly 
       tabindex="-1"></textarea>
@@ -37,6 +50,8 @@
       on:keydown={(e) => tabbing(e)}
       name={name} 
       id="codeEditor" 
+      style:background-color={editorBg}
+      style:color={editorColor}
       spellcheck="false" 
     />
   </div>
@@ -57,7 +72,6 @@
     resize: none;
     font-family: 'ui-monospace', 'Menlo', 'Monaco', monospace;
     font-size: 14px;
-    color: var(--white);
   }
 
   #lineCounter:focus-visible,
@@ -67,25 +81,14 @@
 
   #lineCounter {
     grid-area: lineCounter;
-    background-color: rgb(52, 57, 77);
     max-width: 40px;
+  }
+  #lineCounter:hover {
+    cursor: default;
   }
 
   #codeEditor {
     grid-area: codeEditor;
     max-width: 100%;
-    background-color: rgb(37, 37, 61);
-  }
-
-  button {
-    background-color: var(--red);
-    color: var(--white);
-    border: 0;
-    padding: 10px 15px;
-    margin: .5rem 0;
-  }
-
-  button:hover {
-    cursor: pointer;
   }
 </style>
