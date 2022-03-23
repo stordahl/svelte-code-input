@@ -14,7 +14,6 @@ const config = {
 		paths: {
 			base: dev ? '' : '/svelte-code-input',
 		},
-		appDir: 'internal',
 	}
 };
 
