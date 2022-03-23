@@ -48,7 +48,7 @@ export class Server {
 			manifest,
 			method_override: {"parameter":"_method","allowed":[]},
 			paths: { base, assets },
-			prefix: assets + '/_app/',
+			prefix: assets + '/internal/',
 			prerender: true,
 			read,
 			root,

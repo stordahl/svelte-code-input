@@ -1,9 +1,9 @@
 export const manifest = {
-	appDir: "_app",
+	appDir: "internal",
 	assets: new Set(["favicon.png","images/github.png","images/npm.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		entry: {"file":"start-4f4e40e7.js","js":["start-4f4e40e7.js","chunks/vendor-c78b13c5.js"],"css":[]},
+		entry: {"file":"start-9a0655ab.js","js":["start-9a0655ab.js","chunks/vendor-c78b13c5.js"],"css":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
