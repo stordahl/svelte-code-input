@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-netlify';
 import preprocess from 'svelte-preprocess';
 
 const dev = process.env.NODE_ENV === 'development';
@@ -11,10 +11,6 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		paths: {
-			base: dev ? '' : '/svelte-code-input',
-		},
-		appDir: 'internal',
 	}
 };
 
