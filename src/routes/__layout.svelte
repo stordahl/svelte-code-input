@@ -1,8 +1,5 @@
-<script lang=ts context=module>
-   
-</script>
 <script lang=ts>
-  import "./base.css"
+  import "./base.css";
 </script>
 
 <header>
@@ -10,7 +7,7 @@
     <h1>svelte-code-input</h1>
   </div>
   <div id="external">
-    <a href="https://npmjs.org">
+    <a href="https://www.npmjs.com/package/svelte-code-input">
       <img src="images/npm.png" alt="View on npm" aria-label="View on npm">
     </a>
     <a href="https://github.com/stordahl/svelte-code-input">
